@@ -4,15 +4,8 @@ window.addEventListener('DOMContentLoaded',(event) => {
 
 
 const createInnerHtml =() => {
-    const headerHtml= <tr>
-    <th></th>
-    <th>Name</th>
-    <th>Gender</th>
-    <th>Department</th>
-    <th>Salary</th>
-    <th>StartDate</th>
-    <th>Actions</th>
-</tr>
+    const headerHtml=
+        "<th></th><th>Name</th><th>Gender</th><th>Department</th><th>Salary</th><th>StartDate</th><th>Actions</th>";
     const innerHtml =  `${headerHtml}
                 
     <tr>

@@ -42,7 +42,7 @@ function createAndUpdateStorage(employeePayrollData){
     employeePayrollList.push(employeePayrollData);
     }
     else{
-        employeePayrollList = [EmployeePayrollData]
+        employeePayrollList = [employeePayrollData]
     }
     alert(employeePayrollList.toString());
     localStorage.setItem("EmployeePayrollList",JSON.stringify(employeePayrollList))
@@ -67,7 +67,7 @@ const createEmployeePayroll= () =>{                                         //in
     let date=getInputValueById('#day')+getInputValueById('#month')+" "+getInputValueById('#year');
 
     employeePayrollData.date=Date.parse(date);
-    alert("Details Entered");
+    alert(employeePayrollData.toString());
     return employeePayrollData;
 }
 /* getSelectedValues() method to push all the values entered by user to array of setItems*/
@@ -111,7 +111,6 @@ const unsetSelectedValues = (propertyValue) => {
     allItems.forEach(item => {
         item.checked = false;
     });
-
 }
 
 const setTextValue = (id,value) => {

@@ -61,12 +61,13 @@ const createEmployeePayroll= () =>{                                         //in
                                                                                             //taking all user input values and setting latest values for name,gender.
     employeePayrollData.profilePic=getSelectedValues('[name=profile]').pop();
     employeePayrollData.gender=getSelectedValues('[name=gender]').pop();
-    employeePayrollData.department=getSelectedValues('#salary');
-    employeePayrollData.salary=getSelectedValues('#notes');
+    employeePayrollData.department=getSelectedValues('[name=department]');
+    employeePayrollData.salary=getInputValueById("#salary");
+    employeePayrollData.notes=getInputValueById("#notes")
     
-    let date=getInputValueById('#day')+getInputValueById('#month')+" "+getInputValueById('#year');
+    let date=getInputValueById('#year')+getInputValueById('#month')+" "+getInputValueById('#day');
 
-    employeePayrollData.date=Date.parse(date);
+    employeePayrollData.startDate= new Date(Date.parse(date));
     alert(employeePayrollData.toString());
     return employeePayrollData;
 }
